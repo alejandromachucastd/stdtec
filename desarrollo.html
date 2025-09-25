@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Software - STD TEC</title>
+    <meta name="description" content="Desarrollo de software personalizado, aplicaciones web, móviles y de escritorio. Soluciones tecnológicas innovadoras para tu empresa.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css?v=2.2">
+    <link rel="stylesheet" href="css/components.css?v=2.2">
+    <link rel="stylesheet" href="css/animations.css?v=2.2">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <h1>STD TEC</h1>
+            </div>
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">STD TEC</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="desarrollo.html" class="nav-link active">Desarrollo</a>
+                <a href="soporte.html" class="nav-link">Soporte</a>
+                <a href="index.html#tienda-online" class="nav-link">Tienda</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </div>
+
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Desarrollo de</span>
+                        <span class="title-line highlight">Software</span>
+                        <span class="title-line">Tecnológico</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transformamos ideas en soluciones digitales innovadoras. 
+                        Desarrollo personalizado con las mejores tecnologías del mercado. <br>
+                        Trabajamos en colaboración con 
+                        <a href="https://www.dstx.mx/" target="_blank">DST</a>.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#servicios" class="btn btn-primary btn-large">
+                            <span>Ver Servicios</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contacto.html" class="btn btn-secondary btn-large">
+                            <span>Solicitar Cotización</span>
+                        </a>
+                        <a href="https://www.dstx.mx/" target="_blank" class="btn btn-secondary btn-large">
+                            <span>Visitar DST</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-content">
+                            <div class="code-preview">
+                                <div class="code-header">
+                                    <div class="code-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span class="code-title">desarrollo.js</span>
+                                </div>
+                                <div class="code-body">
+                                    <div class="code-line">
+                                        <span class="code-keyword">class</span> 
+                                        <span class="code-variable">STDTecDev</span> {
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-keyword">constructor</span>() {
+                                    </div>
+                                    <div class="code-line indent2">
+                                        <span class="code-keyword">this</span>.<span class="code-variable">quality</span> = 
+                                        <span class="code-string">'premium'</span>;
+                                    </div>
+                                    <div class="code-line indent">
+                                        }
+                                    </div>
+                                    <div class="code-line">
+                                        }
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="code-comment">// Código que transforma negocios</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Especialidades en Desarrollo</h2>
+                <p class="section-subtitle">Tecnologías y metodologías que dominamos para crear soluciones excepcionales</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>Frontend Moderno</h3>
+                    <p>React, Vue.js, Angular y tecnologías de vanguardia para interfaces de usuario atractivas y funcionales que cautivan a tus usuarios.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Robusto</h3>
+                    <p>Node.js, Python, PHP y arquitecturas escalables que garantizan el rendimiento y la seguridad de tus aplicaciones empresariales.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automatización de Procesos</h3>
+                    <p>Sistemas inteligentes que automatizan tareas repetitivas, optimizan flujos de trabajo y aumentan la productividad empresarial mediante soluciones tecnológicas avanzadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services-selector-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios de Desarrollo</h2>
+                <p class="section-subtitle">Selecciona el tipo de desarrollo que necesitas</p>
+            </div>
+            
+            <!-- Service Type Selector -->
+            <div class="service-selector">
+                <button class="selector-btn active" data-service="particular">
+                    <div class="selector-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="selector-content">
+                        <h3>Particulares</h3>
+                        <p>Proyectos personales y pequeños negocios</p>
+                    </div>
+                </button>
+                
+                <button class="selector-btn" data-service="empresarial">
+                    <div class="selector-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="selector-content">
+                        <h3>Empresariales</h3>
+                        <p>Soluciones corporativas y sistemas complejos</p>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Services Content -->
+            <div class="services-content">
+                <!-- Servicios Particulares -->
+                <div class="service-category active" id="particular-services">
+                    <div class="services-grid">
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <h4>Sitios Web Personales</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Portfolios profesionales</li>
+                                <li><i class="fas fa-check"></i> Blogs y sitios de contenido</li>
+                                <li><i class="fas fa-check"></i> Landing pages efectivas</li>
+                                <li><i class="fas fa-check"></i> Sitios web responsivos</li>
+                                <li><i class="fas fa-check"></i> Optimización SEO básica</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <h4>E-commerce</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> E-commerce para pequeños negocios</li>
+                                <li><i class="fas fa-check"></i> Catálogos de productos</li>
+                                <li><i class="fas fa-check"></i> Pasarelas de pago</li>
+                                <li><i class="fas fa-check"></i> Gestión de inventario</li>
+                                <li><i class="fas fa-check"></i> Panel de administración</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4>Apps Móviles</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Progressive Web Apps</li>
+                                <li><i class="fas fa-check"></i> Apps híbridas</li>
+                                <li><i class="fas fa-check"></i> Diseño UX/UI moderno</li>
+                                <li><i class="fas fa-check"></i> Funcionalidades offline</li>
+                                <li><i class="fas fa-check"></i> Notificaciones push</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h4>Herramientas Personalizadas</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Calculadoras especializadas</li>
+                                <li><i class="fas fa-check"></i> Sistemas de gestión simples</li>
+                                <li><i class="fas fa-check"></i> Automatización de tareas</li>
+                                <li><i class="fas fa-check"></i> Integraciones con APIs</li>
+                                <li><i class="fas fa-check"></i> Dashboards personales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Servicios Empresariales -->
+                <div class="service-category" id="empresarial-services">
+                    <div class="services-grid">
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4>Sistemas ERP</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Planificación de recursos</li>
+                                <li><i class="fas fa-check"></i> Gestión financiera</li>
+                                <li><i class="fas fa-check"></i> Control de inventarios</li>
+                                <li><i class="fas fa-check"></i> Recursos humanos</li>
+                                <li><i class="fas fa-check"></i> Reportes avanzados</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Plataformas CRM</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Gestión de clientes</li>
+                                <li><i class="fas fa-check"></i> Pipeline de ventas</li>
+                                <li><i class="fas fa-check"></i> Automatización de marketing</li>
+                                <li><i class="fas fa-check"></i> Análisis de comportamiento</li>
+                                <li><i class="fas fa-check"></i> Integración con herramientas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <h4>Soluciones en la Nube</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Arquitecturas escalables</li>
+                                <li><i class="fas fa-check"></i> Microservicios</li>
+                                <li><i class="fas fa-check"></i> APIs empresariales</li>
+                                <li><i class="fas fa-check"></i> Seguridad avanzada</li>
+                                <li><i class="fas fa-check"></i> Monitoreo 24/7</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h4>Automatización Empresarial</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Flujos de trabajo automatizados</li>
+                                <li><i class="fas fa-check"></i> Integración de sistemas</li>
+                                <li><i class="fas fa-check"></i> Procesamiento de datos</li>
+                                <li><i class="fas fa-check"></i> Reportes automáticos</li>
+                                <li><i class="fas fa-check"></i> Optimización de procesos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Portafolio</h2>
+                <p class="section-subtitle">Proyectos exitosos que demuestran nuestra experiencia</p>
+            </div>
+            
+            <!-- Portfolio Type Selector -->
+            <div class="portfolio-selector">
+                <button class="portfolio-btn active" data-portfolio="desarrollo">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Desarrollo</h3>
+                        <p>Proyectos web y aplicaciones</p>
+                    </div>
+                </button>
+                
+                <button class="portfolio-btn" data-portfolio="herramientas">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Desarrollo de Herramientas</h3>
+                        <p>Sistemas y apps para uso general</p>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Portfolio Content -->
+            <div class="portfolio-content-wrapper">
+                <!-- Desarrollo Portfolio -->
+                <div class="portfolio-category active" id="desarrollo-portfolio">
+                    <!-- Sub-selector for Desarrollo -->
+                    <div class="portfolio-sub-selector">
+                        <button class="sub-selector-btn active" data-sub="particular-dev">Particulares</button>
+                        <button class="sub-selector-btn" data-sub="empresarial-dev">Empresariales</button>
+                    </div>
+                    
+                    <!-- Particulares Development -->
+                    <div class="portfolio-grid active" id="particular-dev">
+                        <div class="portfolio-item" data-animate="fadeInUp">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Portfolio+Personal" alt="Portfolio Personal" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Portfolio Personal</h4>
+                                        <p>Sitio web profesional para diseñador</p>
+                                        <div class="portfolio-tags">
+                                            <span>React</span>
+                                            <span>CSS3</span>
+                                            <span>Responsive</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="100">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=E-commerce" alt="E-commerce" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>E-commerce</h4>
+                                        <p>E-commerce para productos artesanales</p>
+                                        <div class="portfolio-tags">
+                                            <span>WooCommerce</span>
+                                            <span>PHP</span>
+                                            <span>PayPal</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="200">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=App+Móvil" alt="App Móvil" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>App de Fitness</h4>
+                                        <p>Aplicación móvil para rutinas de ejercicio</p>
+                                        <div class="portfolio-tags">
+                                            <span>React Native</span>
+                                            <span>Firebase</span>
+                                            <span>PWA</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="300">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Blog+Personal" alt="Blog Personal" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Blog de Cocina</h4>
+                                        <p>Plataforma de recetas y contenido culinario</p>
+                                        <div class="portfolio-tags">
+                                            <span>WordPress</span>
+                                            <span>SEO</span>
+                                            <span>Analytics</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empresariales Development -->
+                    <div class="portfolio-grid" id="empresarial-dev">
+                        <div class="portfolio-item" data-animate="fadeInUp">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Sistema+ERP" alt="Sistema ERP" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Sistema ERP Corporativo</h4>
+                                        <p>Plataforma integral para gestión empresarial</p>
+                                        <div class="portfolio-tags">
+                                            <span>Laravel</span>
+                                            <span>Vue.js</span>
+                                            <span>MySQL</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="100">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=CRM+Ventas" alt="CRM Ventas" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>CRM de Ventas</h4>
+                                        <p>Sistema de gestión de clientes y pipeline</p>
+                                        <div class="portfolio-tags">
+                                            <span>Node.js</span>
+                                            <span>React</span>
+                                            <span>MongoDB</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="200">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=E-Learning" alt="Plataforma E-Learning" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Plataforma E-Learning</h4>
+                                        <p>Sistema de cursos online corporativo</p>
+                                        <div class="portfolio-tags">
+                                            <span>Django</span>
+                                            <span>PostgreSQL</span>
+                                            <span>WebRTC</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="300">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=API+Cloud" alt="API Cloud" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>API en la Nube</h4>
+                                        <p>Microservicios escalables para empresa</p>
+                                        <div class="portfolio-tags">
+                                            <span>AWS</span>
+                                            <span>Docker</span>
+                                            <span>Kubernetes</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Herramientas Portfolio -->
+                <div class="portfolio-category" id="herramientas-portfolio">
+                    <!-- Sub-selector for Herramientas -->
+                    <div class="portfolio-sub-selector">
+                        <button class="sub-selector-btn active" data-sub="particular-her">Uso General</button>
+                        <button class="sub-selector-btn" data-sub="empresarial-her">Venta/Comercial</button>
+                    </div>
+                    
+                    <!-- Uso General Herramientas -->
+                    <div class="portfolio-grid active" id="particular-her">
+                        <div class="portfolio-item" data-animate="fadeInUp">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Sistema+Mantenimiento" alt="Sistema Mantenimiento" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Sistema de Mantenimiento</h4>
+                                        <p>Herramienta para control de equipos y programación</p>
+                                        <div class="portfolio-tags">
+                                            <span>Excel</span>
+                                            <span>Automatización</span>
+                                            <span>Mantenimiento</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="100">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=App+Google" alt="App Google" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Google Apps Script</h4>
+                                        <p>Automatización de procesos en Google Workspace</p>
+                                        <div class="portfolio-tags">
+                                            <span>Google Apps</span>
+                                            <span>Sheets</span>
+                                            <span>Automatización</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="200">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Excel+Avanzado" alt="Excel Avanzado" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Plantillas Excel Avanzadas</h4>
+                                        <p>Sistemas complejos con macros y automatización</p>
+                                        <div class="portfolio-tags">
+                                            <span>Excel</span>
+                                            <span>VBA</span>
+                                            <span>Macros</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="300">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Herramientas+Utilidad" alt="Herramientas Utilidad" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Herramientas de Utilidad</h4>
+                                        <p>Aplicaciones desktop para tareas específicas</p>
+                                        <div class="portfolio-tags">
+                                            <span>Desktop</span>
+                                            <span>Utilidades</span>
+                                            <span>Productividad</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Venta/Comercial Herramientas -->
+                    <div class="portfolio-grid" id="empresarial-her">
+                        <div class="portfolio-item" data-animate="fadeInUp">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=CRM+Ventas" alt="CRM Ventas" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Sistema CRM de Ventas</h4>
+                                        <p>Herramienta para gestión de clientes y pipeline</p>
+                                        <div class="portfolio-tags">
+                                            <span>CRM</span>
+                                            <span>Ventas</span>
+                                            <span>Pipeline</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="100">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Cotizador+Automático" alt="Cotizador Automático" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Cotizador Automático</h4>
+                                        <p>Sistema para generar cotizaciones y propuestas</p>
+                                        <div class="portfolio-tags">
+                                            <span>Cotizaciones</span>
+                                            <span>Excel</span>
+                                            <span>Automatización</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="200">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Dashboard+Ventas" alt="Dashboard Ventas" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Dashboard de Ventas</h4>
+                                        <p>Tablero de control con métricas y KPIs</p>
+                                        <div class="portfolio-tags">
+                                            <span>Dashboard</span>
+                                            <span>KPIs</span>
+                                            <span>Análisis</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="300">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Catálogo+Digital" alt="Catálogo Digital" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Catálogo Digital Interactivo</h4>
+                                        <p>Herramienta de ventas con productos y precios</p>
+                                        <div class="portfolio-tags">
+                                            <span>Catálogo</span>
+                                            <span>Ventas</span>
+                                            <span>Interactivo</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-number" data-count="23">0</div>
+                    <div class="stat-label">Proyectos Completados</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">% de Éxito</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                    <h3>STD TEC</h3>
+                    </div>
+                    <p class="footer-description">
+                        Soluciones tecnológicas profesionales para impulsar tu negocio hacia el futuro digital.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100090599914884" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/cyberstdtec/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/524273719797" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="desarrollo.html">Desarrollo Web</a></li>
+                        <li><a href="desarrollo.html">Desarrollo Móvil</a></li>
+                        <li><a href="soporte.html">Soporte Técnico</a></li>
+                        <li><a href="contacto.html">Consultoría</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="index.html#about">Acerca de</a></li>
+                        <li><a href="desarrollo.html">Proyectos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +52 427 371 9797</li>
+                        <li><i class="fas fa-envelope"></i> cyberstdtec@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle Ignacio Allende 12, Centro, 76800 San Juan del Río, Qro.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 STD TEC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/config.js?v=2.2"></script>
+    <script src="js/utils.js?v=2.2"></script>
+    <script src="js/components.js?v=2.2"></script>
+    <script src="js/main-clean.js?v=2.3"></script>
+</body>
+</html>

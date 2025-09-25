@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - STD TEC</title>
+    <meta name="description" content="Contáctanos para desarrollo de software y soporte técnico. Cotizaciones gratuitas y atención personalizada.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css?v=2.0">
+    <link rel="stylesheet" href="css/components.css?v=2.1">
+    <link rel="stylesheet" href="css/animations.css?v=2.0">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <h1>STD TEC</h1>
+            </div>
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">STD TEC</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="desarrollo.html" class="nav-link">Desarrollo</a>
+                <a href="soporte.html" class="nav-link">Soporte</a>
+                <a href="index.html#tienda-online" class="nav-link">Tienda</a>
+                <a href="contacto.html" class="nav-link active">Contacto</a>
+            </div>
+
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Hablemos de tu</span>
+                        <span class="title-line highlight">Proyecto</span>
+                        <span class="title-line">Tecnológico</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        ¿Tienes una idea innovadora o necesitas soporte técnico? 
+                        Estamos aquí para convertir tus desafíos en soluciones exitosas.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#formulario" class="btn btn-primary btn-large">
+                            <span>Enviar Mensaje</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="tel:+524273719797" class="btn btn-secondary btn-large">
+                            <span>Llamar Ahora</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-content">
+                            <div class="code-preview">
+                                <div class="code-header">
+                                    <div class="code-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span class="code-title">contacto.js</span>
+                                </div>
+                                <div class="code-body">
+                                    <div class="code-line">
+                                        <span class="code-keyword">function</span> 
+                                        <span class="code-function">conectar</span>() {
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-keyword">const</span> 
+                                        <span class="code-variable">respuesta</span> = 
+                                        <span class="code-string">'2 horas'</span>;
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-keyword">const</span> 
+                                        <span class="code-variable">disponibilidad</span> = 
+                                        <span class="code-string">'24/7'</span>;
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-keyword">return</span> 
+                                        <span class="code-string">'conexión exitosa'</span>;
+                                    </div>
+                                    <div class="code-line">
+                                        }
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="code-comment">// Siempre conectados contigo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section id="info" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Información de Contacto</h2>
+                <p class="section-subtitle">Múltiples formas de conectar contigo para brindarte el mejor servicio</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Teléfono</h3>
+                    <p>Línea directa para consultas inmediatas y soporte urgente.</p>
+                    <a href="tel:+524273719797" class="contact-link">+52 427 371 9797</a>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Envíanos tu consulta detallada y te responderemos en máximo 2 horas.</p>
+                    <a href="mailto:cyberstdtec@gmail.com" class="contact-link">cyberstdtec@gmail.com</a>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Ubicación</h3>
+                    <p>Visítanos en nuestras oficinas para una consulta personalizada.</p>
+                    <p class="contact-link">Calle Ignacio Allende 12, Centro, 76800 San Juan del Río, Qro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="formulario" class="services-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Envíanos un Mensaje</h2>
+                <p class="section-subtitle">Completa el formulario y nos pondremos en contacto contigo</p>
+            </div>
+            
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Servicio de Interés</label>
+                            <select id="service" name="service">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="desarrollo-web">Desarrollo Web</option>
+                                <option value="desarrollo-movil">Desarrollo Móvil</option>
+                                <option value="desarrollo-escritorio">Software de Escritorio</option>
+                                <option value="soporte-tecnico">Soporte Técnico</option>
+                                <option value="mantenimiento">Mantenimiento</option>
+                                <option value="consultoria">Consultoría</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Asunto *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensaje *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Cuéntanos sobre tu proyecto o necesidad..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="privacy" required>
+                            <span class="checkmark"></span>
+                            Acepto la política de privacidad y el tratamiento de mis datos personales
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <span>Enviar Mensaje</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Ubicación</h2>
+                <p class="section-subtitle">Visítanos en nuestras oficinas o agenda una cita</p>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Dirección</h4>
+                            <p>Av. Insurgentes Sur 1234<br>Col. Del Valle, CDMX<br>C.P. 03100</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Horarios de Atención</h4>
+                            <p>Lunes a Viernes: 9:00 - 18:00<br>Sábados: 9:00 - 14:00<br>Domingos: Cerrado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Visitas Domiciliarias</h4>
+                            <p>Realizamos visitas<br>a domicilio para<br>diagnóstico y reparación</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-embed">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.8267842159!2d-99.17832368507616!3d19.368874486929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5733d1f%3A0x3c69df9b0b08c1a4!2sAv.%20Insurgentes%20Sur%2C%20Del%20Valle%2C%20Benito%20Ju%C3%A1rez%2C%20CDMX!5e0!3m2!1ses!2smx!4v1635789012345!5m2!1ses!2smx"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="2">0</div>
+                    <div class="stat-label">Horas de Respuesta</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">Clientes Satisfechos</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Soporte 24/7</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Calificación Promedio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                    <h3>STD TEC</h3>
+                    </div>
+                    <p class="footer-description">
+                        Soluciones tecnológicas profesionales para impulsar tu negocio hacia el futuro digital.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100090599914884" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/cyberstdtec/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/524273719797" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="desarrollo.html">Desarrollo Web</a></li>
+                        <li><a href="desarrollo.html">Desarrollo Móvil</a></li>
+                        <li><a href="soporte.html">Soporte Técnico</a></li>
+                        <li><a href="contacto.html">Consultoría</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="index.html#about">Acerca de</a></li>
+                        <li><a href="desarrollo.html">Proyectos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +52 427 371 9797</li>
+                        <li><i class="fas fa-envelope"></i> cyberstdtec@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle Ignacio Allende 12, Centro, 76800 San Juan del Río, Qro.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 STD TEC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/config.js?v=2.0"></script>
+    <script src="js/utils.js?v=2.0"></script>
+    <script src="js/components.js?v=2.0"></script>
+    <script src="js/main-clean.js?v=2.3"></script>
+</body>
+</html>

@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico - STD TEC</title>
+    <meta name="description" content="Soporte técnico especializado 24/7. Mantenimiento, reparación y consulta de equipos. Servicio profesional y confiable.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css?v=2.2">
+    <link rel="stylesheet" href="css/components.css?v=2.2">
+    <link rel="stylesheet" href="css/animations.css?v=2.2">
+    
+    <!-- Fix específico para icono y botón del buscador -->
+    <style>
+        /* Icono circular - MODO CLARO */
+        .search-icon-circle i {
+            color: #007bff !important;
+            font-size: 28px !important;
+        }
+        
+        /* Botón búsqueda - MODO CLARO */
+        #search-ticket-btn {
+            background: #007bff !important;
+            color: white !important;
+            border: 2px solid #007bff !important;
+        }
+        
+        #search-ticket-btn:hover {
+            background: #ffc107 !important;
+            color: #000 !important;
+            border-color: #ffc107 !important;
+        }
+        
+        #search-ticket-btn i,
+        #search-ticket-btn span {
+            color: white !important;
+        }
+        
+        #search-ticket-btn:hover i,
+        #search-ticket-btn:hover span {
+            color: #000 !important;
+        }
+        
+        /* MODO OSCURO */
+        [data-theme="dark"] .search-icon-circle i {
+            color: #4299e1 !important;
+        }
+        
+        [data-theme="dark"] #search-ticket-btn {
+            background: #2d3748 !important;
+            color: #4299e1 !important;
+            border: 2px solid #4299e1 !important;
+        }
+        
+        [data-theme="dark"] #search-ticket-btn:hover {
+            background: #4299e1 !important;
+            color: #1a202c !important;
+        }
+        
+        [data-theme="dark"] #search-ticket-btn i,
+        [data-theme="dark"] #search-ticket-btn span {
+            color: #4299e1 !important;
+        }
+        
+        [data-theme="dark"] #search-ticket-btn:hover i,
+        [data-theme="dark"] #search-ticket-btn:hover span {
+            color: #1a202c !important;
+        }
+        
+        /* Estilos para la nueva sección de información de folios */
+        .folio-info-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border: 1px solid rgba(0, 123, 255, 0.1);
+        }
+        
+        .folio-info-section h4 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #007bff;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+        }
+        
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .info-icon i {
+            color: white;
+            font-size: 20px;
+        }
+        
+        /* Icono específico de WhatsApp con fondo verde */
+        .info-card:has(.fa-whatsapp) .info-icon {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+        }
+        
+        .info-content h5 {
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .info-content p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .folio-format-info {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px dashed #007bff;
+            text-align: center;
+        }
+        
+        .format-example {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #007bff;
+        }
+        
+        .format-example i {
+            font-size: 18px;
+        }
+        
+        .folio-format-info p {
+            color: #666;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        /* Modo oscuro para la sección de información */
+        [data-theme="dark"] .folio-info-section {
+            background: linear-gradient(135deg, #2d3748, #4a5568);
+            border-color: rgba(66, 153, 225, 0.3);
+        }
+        
+        [data-theme="dark"] .folio-info-section h4 {
+            color: #e2e8f0;
+        }
+        
+        [data-theme="dark"] .info-card {
+            background: #1a202c;
+            border-left-color: #4299e1;
+        }
+        
+        [data-theme="dark"] .info-content h5 {
+            color: #e2e8f0;
+        }
+        
+        [data-theme="dark"] .info-content p {
+            color: #a0aec0;
+        }
+        
+        [data-theme="dark"] .folio-format-info {
+            background: #1a202c;
+            border-color: #4299e1;
+        }
+        
+        [data-theme="dark"] .format-example {
+            color: #4299e1;
+        }
+        
+        [data-theme="dark"] .folio-format-info p {
+            color: #a0aec0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .folio-info-section {
+                padding: 20px;
+                margin-top: 30px;
+            }
+            
+            .info-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <h1>STD TEC</h1>
+            </div>
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">STD TEC</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="desarrollo.html" class="nav-link">Desarrollo</a>
+                <a href="soporte.html" class="nav-link active">Soporte</a>
+                <a href="index.html#tienda-online" class="nav-link">Tienda</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </div>
+
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Soporte</span>
+                        <span class="title-line highlight">Técnico</span>
+                        <span class="title-line">Especializado</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Mantenemos tu tecnología funcionando perfectamente. 
+                        Soporte 24/7 con técnicos especializados y respuesta rápida.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#consultar" class="btn btn-primary btn-large">
+                            <span>Consultar Folio</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contacto.html" class="btn btn-secondary btn-large">
+                            <span>Solicitar Soporte</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="card-content">
+                            <div class="code-preview">
+                                <div class="code-header">
+                                    <div class="code-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span class="code-title">soporte.js</span>
+                                </div>
+                                <div class="code-body">
+                                    <div class="code-line">
+                                        <span class="code-keyword">const</span> 
+                                        <span class="code-variable">soporte</span> = {
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-variable">disponibilidad</span>: 
+                                        <span class="code-string">'24/7'</span>,
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-variable">respuesta</span>: 
+                                        <span class="code-string">'inmediata'</span>,
+                                    </div>
+                                    <div class="code-line indent">
+                                        <span class="code-variable">calidad</span>: 
+                                        <span class="code-string">'premium'</span>
+                                    </div>
+                                    <div class="code-line">
+                                        };
+                                    </div>
+                                    <div class="code-line">
+                                        <span class="code-comment">// Tu tranquilidad es nuestra prioridad</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticket Search Section -->
+    <section id="consultar" class="ticket-search-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Consulta tu Folio de Servicio</h2>
+                <p class="section-subtitle">Ingresa tu número de folio para conocer el estado de tu equipo en tiempo real</p>
+            </div>
+            
+            <div class="search-wrapper">
+                <div class="search-card">
+                    <div class="search-icon-header">
+                        <div class="search-icon-circle">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Buscar Folio</h3>
+                    </div>
+                    
+                    <div class="search-form">
+                        <div class="input-group">
+                            <input type="text" id="ticket-search" placeholder="Ejemplo: STD-2024-001" class="search-input-new">
+                            <button id="search-ticket-btn" class="btn-search">
+                                <i class="fas fa-search"></i>
+                                <span>Buscar</span>
+                            </button>
+                        </div>
+                        
+                        <div class="search-help">
+                            <p><i class="fas fa-info-circle"></i> El folio se encuentra en tu comprobante de servicio</p>
+                        </div>
+                    </div>
+                    
+                    <div id="ticket-result" class="search-result-new" style="display: none;"></div>
+                </div>
+                
+                <div class="folio-info-section">
+                    <h4>¿Cómo funciona nuestro sistema de folios?</h4>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clipboard-check"></i>
+                            </div>
+                            <div class="info-content">
+                                <h5>Registro Completo</h5>
+                                <p>Cada equipo recibe un folio único con toda la información del servicio y seguimiento detallado.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                            <div class="info-content">
+                                <h5>Seguimiento en Tiempo Real</h5>
+                                <p>Consulta el estado de tu equipo las 24 horas con actualizaciones automáticas del progreso.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h5>Historial Seguro</h5>
+                                <p>Mantenemos un registro completo y seguro de todos los servicios realizados a tu equipo.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="info-content">
+                                <h5>Notificaciones por WhatsApp</h5>
+                                <p>Recibe alertas automáticas por WhatsApp cuando tu equipo esté listo para recoger o necesite aprobación.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="folio-format-info">
+                        <div class="format-example">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Formato de folio: <strong>STD-2025-XXXXXX</strong></span>
+                        </div>
+                        <p>Tu número de folio se encuentra en el comprobante que te entregamos al recibir tu equipo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios de Soporte</h2>
+                <p class="section-subtitle">Cobertura completa para todos tus equipos y necesidades tecnológicas</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Soporte Empresarial</h3>
+                    <p>Servicios técnicos especializados para empresas: mantenimiento de infraestructura IT, soporte a usuarios corporativos, gestión de redes empresariales y contratos de soporte 24/7 con SLA garantizado.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Soporte Particular</h3>
+                    <p>Atención personalizada para usuarios domésticos: reparación de equipos personales, instalación de software, recuperación de datos, optimización de rendimiento y asesoría tecnológica a domicilio.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Soporte Remoto 24/7</h3>
+                    <p>Asistencia técnica inmediata vía remota para empresas y particulares: resolución de problemas de software, configuración de sistemas, instalación de programas y soporte técnico sin necesidad de visita presencial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services-selector-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Servicios de Soporte</h2>
+                <p class="section-subtitle">Selecciona el tipo de servicio que necesitas</p>
+            </div>
+            
+            <!-- Service Type Selector -->
+            <div class="service-selector">
+                <button class="selector-btn active" data-service="particular">
+                    <div class="selector-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="selector-content">
+                        <h3>Particulares</h3>
+                        <p>Servicios para usuarios domésticos</p>
+                    </div>
+                </button>
+                
+                <button class="selector-btn" data-service="empresarial">
+                    <div class="selector-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="selector-content">
+                        <h3>Empresariales</h3>
+                        <p>Soluciones para empresas y organizaciones</p>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Services Content -->
+            <div class="services-content">
+                <!-- Servicios Particulares -->
+                <div class="service-category active" id="particular-services">
+                    <div class="services-grid">
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-laptop"></i>
+                                </div>
+                                <h4>Computadoras Personales</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Reparación de laptops y PCs</li>
+                                <li><i class="fas fa-check"></i> Limpieza y mantenimiento</li>
+                                <li><i class="fas fa-check"></i> Instalación de software</li>
+                                <li><i class="fas fa-check"></i> Recuperación de datos</li>
+                                <li><i class="fas fa-check"></i> Actualización de componentes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-print"></i>
+                                </div>
+                                <h4>Impresoras Domésticas</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Reparación de impresoras</li>
+                                <li><i class="fas fa-check"></i> Cambio de cartuchos</li>
+                                <li><i class="fas fa-check"></i> Limpieza de cabezales</li>
+                                <li><i class="fas fa-check"></i> Configuración WiFi</li>
+                                <li><i class="fas fa-check"></i> Instalación de drivers</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-wifi"></i>
+                                </div>
+                                <h4>Redes Domésticas</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Configuración de WiFi</li>
+                                <li><i class="fas fa-check"></i> Optimización de velocidad</li>
+                                <li><i class="fas fa-check"></i> Seguridad de red</li>
+                                <li><i class="fas fa-check"></i> Extensores de señal</li>
+                                <li><i class="fas fa-check"></i> Smart TV y streaming</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4>Dispositivos Móviles</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Reparación de pantallas</li>
+                                <li><i class="fas fa-check"></i> Cambio de baterías</li>
+                                <li><i class="fas fa-check"></i> Liberación de equipos</li>
+                                <li><i class="fas fa-check"></i> Recuperación de datos</li>
+                                <li><i class="fas fa-check"></i> Configuración y respaldo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Servicios Empresariales -->
+                <div class="service-category" id="empresarial-services">
+                    <div class="services-grid">
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h4>Infraestructura IT</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Servidores y almacenamiento</li>
+                                <li><i class="fas fa-check"></i> Virtualización de sistemas</li>
+                                <li><i class="fas fa-check"></i> Backup y recuperación</li>
+                                <li><i class="fas fa-check"></i> Monitoreo 24/7</li>
+                                <li><i class="fas fa-check"></i> Mantenimiento preventivo</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h4>Redes Empresariales</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Diseño e implementación</li>
+                                <li><i class="fas fa-check"></i> Switches y routers empresariales</li>
+                                <li><i class="fas fa-check"></i> Cableado estructurado</li>
+                                <li><i class="fas fa-check"></i> Seguridad y firewalls</li>
+                                <li><i class="fas fa-check"></i> WiFi empresarial</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h4>Seguridad IT</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Sistemas de videovigilancia</li>
+                                <li><i class="fas fa-check"></i> Control de acceso</li>
+                                <li><i class="fas fa-check"></i> Antivirus corporativo</li>
+                                <li><i class="fas fa-check"></i> Auditorías de seguridad</li>
+                                <li><i class="fas fa-check"></i> Políticas de seguridad</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-card-new">
+                            <div class="service-header">
+                                <div class="service-icon-new">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h4>Soporte a Usuarios</h4>
+                            </div>
+                            <ul class="service-list-new">
+                                <li><i class="fas fa-check"></i> Help desk corporativo</li>
+                                <li><i class="fas fa-check"></i> Soporte remoto</li>
+                                <li><i class="fas fa-check"></i> Capacitación de personal</li>
+                                <li><i class="fas fa-check"></i> Gestión de equipos</li>
+                                <li><i class="fas fa-check"></i> SLA personalizado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestro Portafolio de Soporte</h2>
+                <p class="section-subtitle">Casos de éxito que demuestran nuestra experiencia técnica</p>
+            </div>
+            
+            <!-- Portfolio Type Selector -->
+            <div class="portfolio-selector">
+                <button class="portfolio-btn active" data-portfolio="reparaciones">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Reparaciones</h3>
+                        <p>Hardware y componentes</p>
+                    </div>
+                </button>
+                
+                <button class="portfolio-btn" data-portfolio="mantenimiento">
+                    <div class="portfolio-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Mantenimiento</h3>
+                        <p>Sistemas y redes</p>
+                    </div>
+                </button>
+            </div>
+            
+            <!-- Portfolio Content -->
+            <div class="portfolio-content-wrapper">
+                <!-- Reparaciones Portfolio -->
+                <div class="portfolio-category active" id="reparaciones-portfolio">
+                    <!-- Sub-selector for Reparaciones -->
+                    <div class="portfolio-sub-selector">
+                        <button class="sub-selector-btn active" data-sub="particular-rep">Particulares</button>
+                        <button class="sub-selector-btn" data-sub="empresarial-rep">Empresariales</button>
+                    </div>
+                    
+                    <!-- Particulares Reparaciones -->
+                    <div class="portfolio-grid active" id="particular-rep">
+                        <div class="portfolio-item" data-animate="fadeInUp">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Laptop+HP" alt="Reparación Laptop HP" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Reparación Laptop HP</h4>
+                                        <p>Cambio de pantalla y limpieza interna completa</p>
+                                        <div class="portfolio-tags">
+                                            <span>Hardware</span>
+                                            <span>Pantalla</span>
+                                            <span>Limpieza</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="100">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=PC+Gaming" alt="PC Gaming" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Optimización PC Gaming</h4>
+                                        <p>Upgrade de componentes y overclocking seguro</p>
+                                        <div class="portfolio-tags">
+                                            <span>Gaming</span>
+                                            <span>Upgrade</span>
+                                            <span>Performance</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="200">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Impresora+Canon" alt="Impresora Canon" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Reparación Impresora Canon</h4>
+                                        <p>Limpieza de cabezales y calibración de colores</p>
+                                        <div class="portfolio-tags">
+                                            <span>Impresora</span>
+                                            <span>Calibración</span>
+                                            <span>Mantenimiento</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="300">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Smartphone" alt="Smartphone" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Reparación Smartphone</h4>
+                                        <p>Cambio de pantalla táctil y batería</p>
+                                        <div class="portfolio-tags">
+                                            <span>Móvil</span>
+                                            <span>Pantalla</span>
+                                            <span>Batería</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empresariales Reparaciones -->
+                    <div class="portfolio-grid" id="empresarial-rep">
+                        <div class="portfolio-item" data-animate="fadeInUp">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Servidor+Dell" alt="Servidor Dell" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Reparación Servidor Dell</h4>
+                                        <p>Reemplazo de discos duros y actualización RAM</p>
+                                        <div class="portfolio-tags">
+                                            <span>Servidor</span>
+                                            <span>Dell</span>
+                                            <span>Hardware</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="100">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=UPS+APC" alt="UPS APC" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Reparación UPS APC</h4>
+                                        <p>Cambio de baterías y calibración del sistema</p>
+                                        <div class="portfolio-tags">
+                                            <span>UPS</span>
+                                            <span>Baterías</span>
+                                            <span>Calibración</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="200">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Switch+Cisco" alt="Switch Cisco" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Reparación Switch Cisco</h4>
+                                        <p>Diagnóstico y reparación de puertos dañados</p>
+                                        <div class="portfolio-tags">
+                                            <span>Switch</span>
+                                            <span>Cisco</span>
+                                            <span>Red</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="300">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Workstation" alt="Workstation" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Workstation Gráfica</h4>
+                                        <p>Reparación de tarjeta gráfica profesional</p>
+                                        <div class="portfolio-tags">
+                                            <span>Workstation</span>
+                                            <span>GPU</span>
+                                            <span>Profesional</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mantenimiento Portfolio -->
+                <div class="portfolio-category" id="mantenimiento-portfolio">
+                    <!-- Sub-selector for Mantenimiento -->
+                    <div class="portfolio-sub-selector">
+                        <button class="sub-selector-btn active" data-sub="particular-man">Particulares</button>
+                        <button class="sub-selector-btn" data-sub="empresarial-man">Empresariales</button>
+                    </div>
+                    
+                    <!-- Particulares Mantenimiento -->
+                    <div class="portfolio-grid active" id="particular-man">
+                        <div class="portfolio-item" data-animate="fadeInUp">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Red+WiFi" alt="Red WiFi" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Configuración Red WiFi</h4>
+                                        <p>Instalación y optimización de red doméstica</p>
+                                        <div class="portfolio-tags">
+                                            <span>WiFi</span>
+                                            <span>Router</span>
+                                            <span>Seguridad</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="100">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=Antivirus" alt="Antivirus" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Limpieza de Virus</h4>
+                                        <p>Eliminación de malware y optimización del sistema</p>
+                                        <div class="portfolio-tags">
+                                            <span>Antivirus</span>
+                                            <span>Malware</span>
+                                            <span>Optimización</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="200">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Backup+Personal" alt="Backup Personal" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Backup Personal</h4>
+                                        <p>Configuración de respaldo automático de archivos</p>
+                                        <div class="portfolio-tags">
+                                            <span>Backup</span>
+                                            <span>Personal</span>
+                                            <span>Automático</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="300">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Actualización+SO" alt="Actualización SO" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Actualización de SO</h4>
+                                        <p>Migración a Windows 11 con preservación de datos</p>
+                                        <div class="portfolio-tags">
+                                            <span>Windows</span>
+                                            <span>Migración</span>
+                                            <span>Datos</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Empresariales Mantenimiento -->
+                    <div class="portfolio-grid" id="empresarial-man">
+                        <div class="portfolio-item" data-animate="fadeInUp">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/667eea/ffffff?text=Red+Empresarial" alt="Red Empresarial" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Red Empresarial</h4>
+                                        <p>Instalación y configuración de infraestructura completa</p>
+                                        <div class="portfolio-tags">
+                                            <span>Cableado</span>
+                                            <span>Switches</span>
+                                            <span>Firewall</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="100">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/764ba2/ffffff?text=CCTV+Sistema" alt="Sistema CCTV" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Sistema de Videovigilancia</h4>
+                                        <p>Instalación de cámaras IP y sistema de monitoreo</p>
+                                        <div class="portfolio-tags">
+                                            <span>CCTV</span>
+                                            <span>IP Cameras</span>
+                                            <span>Monitoreo</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="200">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/f093fb/ffffff?text=Backup+Cloud" alt="Backup Cloud" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Sistema de Backup Empresarial</h4>
+                                        <p>Implementación de respaldo automático en la nube</p>
+                                        <div class="portfolio-tags">
+                                            <span>Backup</span>
+                                            <span>Cloud</span>
+                                            <span>Empresarial</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item" data-animate="fadeInUp" data-delay="300">
+                            <div class="portfolio-image">
+                                <img src="https://via.placeholder.com/400x300/4facfe/ffffff?text=Dominio+AD" alt="Dominio AD" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-info">
+                                        <h4>Configuración Active Directory</h4>
+                                        <p>Implementación de dominio y políticas de grupo</p>
+                                        <div class="portfolio-tags">
+                                            <span>Active Directory</span>
+                                            <span>Dominio</span>
+                                            <span>Políticas</span>
+                                        </div>
+                                    </div>
+                                    <button class="portfolio-view-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="24">0</div>
+                    <div class="stat-label">Horas de Soporte</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <div class="stat-number" data-count="350">0</div>
+                    <div class="stat-label">Equipos Reparados y contando</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-label">% Éxito en Reparación</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="200">0</div>
+                    <div class="stat-label">Clientes Atendidos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                    <h3>STD TEC</h3>
+                    </div>
+                    <p class="footer-description">
+                        Soluciones tecnológicas profesionales para impulsar tu negocio hacia el futuro digital.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100090599914884" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/cyberstdtec/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/524273719797" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="desarrollo.html">Desarrollo Web</a></li>
+                        <li><a href="desarrollo.html">Desarrollo Móvil</a></li>
+                        <li><a href="soporte.html">Soporte Técnico</a></li>
+                        <li><a href="contacto.html">Consultoría</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="index.html#about">Acerca de</a></li>
+                        <li><a href="desarrollo.html">Proyectos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +52 427 371 9797</li>
+                        <li><i class="fas fa-envelope"></i> cyberstdtec@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Calle Ignacio Allende 12, Centro, 76800 San Juan del Río, Qro.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 STD TEC. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <script src="js/firebase-config.js?v=1.0"></script>
+    <script src="js/firebase-simple.js?v=1.0"></script>
+    <script src="js/config.js?v=2.2"></script>
+    <script src="js/utils.js?v=2.2"></script>
+    <script src="js/components.js?v=2.2"></script>
+    <script src="js/main-clean.js?v=2.4"></script>
+    
+</body>
+</html>
